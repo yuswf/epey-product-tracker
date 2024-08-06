@@ -4,7 +4,7 @@ const schedule = require('node-schedule');
 const {product_url, pushBullet_token, target_price} = require('./config');
 
 const getData = async () => {
-    const browser = await puppeteer.launch({headless: false});
+    const browser = await puppeteer.launch({headless: true});
     const page = await browser.newPage();
 
     await page.goto(product_url);
